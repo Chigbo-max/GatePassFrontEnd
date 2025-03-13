@@ -1,0 +1,54 @@
+.security_dashboard {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .security_dashboard h2 {
+    color: #3d231b;
+    margin-bottom: 20px;
+  }
+  
+  .security_dashboard form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .security_dashboard input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .security_dashboard button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3d231b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .security_dashboard button:hover {
+    background-color: #5a3226;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
