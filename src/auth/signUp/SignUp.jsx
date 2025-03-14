@@ -3,7 +3,7 @@ import { ClipLoader } from 'react-spinners';
 import Button from "../../reusables/Button";
 import { usePostSignUpMutation } from '../../services/GatePassApi';
 import { useNavigate } from "react-router-dom";
-
+import Style from "./SignUp.module.css"
 export default function SignUp() {
   const [signUp, { data, error, isLoading }] = usePostSignUpMutation();
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function SignUp() {
 
       setSuccessMessage("Signup successful! Redirecting... ");
       setTimeout(() => {
-        if (response.role === "ADMIN") navigate("/admin-dashboard");
+        if (response.role === "ADMIN") navigate("/admin");
         else if (response.role === "SECURITY") navigate("/security");
         else navigate("/generateOtp");
       }, 2000); 
@@ -37,7 +37,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="signup-container">
+    <div className={Style.signup_container}>
       <form onSubmit={handleSubmit}>
         <h2>Sign up</h2>
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />

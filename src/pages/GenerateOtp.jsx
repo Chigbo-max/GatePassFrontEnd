@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { usePostGenerateOtpMutation } from "../services/GatePassApi";
 import Button from "../reusables/Button";
+import Style from "./generateOtp.module.css";
 
 export default function GenerateOtp() {
   const [generateOtp, { data, error, isLoading }] = usePostGenerateOtpMutation();
@@ -31,7 +32,7 @@ export default function GenerateOtp() {
   };
 
   return (
-    <div className="otp-container">
+    <div className={Style.otp_container}>
       <form onSubmit={handleGenerateOtp}>
         <h2>Generate OTP</h2>
         <input
@@ -58,7 +59,7 @@ export default function GenerateOtp() {
       </form>
 
       {otpData && (
-        <div className="otp-display">
+        <div className="otp_display">
           <h3>OTP Code: {otpData.otp}</h3>
           <p>Expires at: {otpData.expiryTime}</p>
           {/* <Button type="button" action="Cancel OTP" onClick={handleCancelOtp} /> */}

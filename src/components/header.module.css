@@ -1,0 +1,9 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerButton{
+    color: #ffff;
+    background: #032440ff;
+}

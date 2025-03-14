@@ -21,7 +21,7 @@ export default function SecurityDashboard() {
 
   return (
     <div className={Style.security_dashboard}>
-      <h2>Security Dashboard</h2>
+      <h2>Validation Dashboard</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

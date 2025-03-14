@@ -37,14 +37,57 @@ export const gatePassApi = createApi({
       url: '/security/validateOtp',
       method: 'POST',
       body: validateOtp,
-    })
-  })
+    }),
+  }),
 
+  postCloseAccount:build.mutation({
+    query: (closeAcccount)=>({
+      url: '/admin/closeAccount',
+      method: 'POST',
+      body: closeAcccount,
+    }),
+  }),
 
+  getViewResidents:build.query({
+    query:()=> 'admin/viewResidents',
+  }),
+
+  postViewResidentById:build.mutation({
+    query:(residentId)=>({
+    url: 'admin/viewResidentById',
+    method: 'POST',
+    body: residentId
+    }),
+  }),
+
+  getViewAllVisitors:build.query({
+    query:()=> 'admin/viewAllVisitors',
+  }),
+
+  postViewVisitorByOtpId:build.mutation({
+    query:(viewVisitorById)=>({
+      url : 'admin/viewVisitorByOtpId',
+      method: 'POST',
+      body: viewVisitorById
+    }),
+  }),
+
+  getAllSecurityPersonnel:build.query({
+    query:()=> 'admin/getAllSecurityPersonnel',
+  }),
+
+  postSecurityPersonnelById:build.mutation({
+    query:(securityDetail)=>({
+      url: 'admin/getSecurityPersonnelById',
+      method: 'POST',
+      body: securityDetail
+
+    }),
+  }),
 
 })
 })
 
-  export const {usePostSignUpMutation, usePostLoginMutation, useValidateOtpMutation, usePostGenerateOtpMutation } = gatePassApi
+  export const {usePostSecurityPersonnelByIdMutation, useGetAllSecurityPersonnelQuery, usePostViewVisitorByOtpIdMutation, useGetViewAllVisitorsQuery, usePostViewResidentByIdMutation, useGetViewResidentsQuery,usePostCloseAccountMutation, usePostSignUpMutation, usePostLoginMutation, useValidateOtpMutation, usePostGenerateOtpMutation } = gatePassApi
 
 

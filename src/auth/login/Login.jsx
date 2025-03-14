@@ -3,6 +3,7 @@ import { ClipLoader } from 'react-spinners';
 import { usePostLoginMutation } from '../../services/GatePassApi';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../reusables/Button';
+import Style from "./Login.module.css"
 
 export default function GenerateOtp() {
   const [login, { data, error, isLoading }] = usePostLoginMutation();
@@ -35,7 +36,7 @@ export default function GenerateOtp() {
   };
 
   return (
-    <div className="login-container">
+    <div className={Style.login_container}>
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />

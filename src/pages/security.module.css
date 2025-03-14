@@ -10,7 +10,7 @@
   }
   
   .security_dashboard h2 {
-    color: #3d231b;
+    color: #032440ff;
     margin-bottom: 20px;
   }
   
@@ -31,7 +31,7 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #3d231b;
+    background-color: #032440ff;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -39,7 +39,7 @@
   }
   
   .security_dashboard button:hover {
-    background-color: #5a3226;
+    background-color: #032440ff;
   }
   
   .success-message {
